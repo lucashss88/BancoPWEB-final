@@ -1,0 +1,38 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+
+<div fxLayout="row wrap" fxLayout.lt-sm="column" class="divmatcard">
+  <h1>LISTAGEM DE CONTAS</h1>
+  <mat-card *ngFor="let conta of contas" class="mat-card-listagem" fxFlex="20%">
+    <mat-card-header class="matheader">
+      <mat-card-title style="font-size: 25px;">
+        <button
+          style="margin-right:5px; background-color: black; color: white;"
+          mat-icon-button
+        >
+          <mat-icon>person</mat-icon>
+        </button>
+        {{ conta.nome }}
+      </mat-card-title>
+      <mat-card-subtitle
+        fxLayout="row wrap"
+        fxLayout.lt-sm="column"
+        style="margin-top: 20px;"
+        class="matsubtitle"
+        *ngIf="conta.cpf"
+      >
+        CPF: {{ conta.cpf }} Saldo: {{ conta.saldo }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions class="matactions">
+      <button mat-icon-button (click)="editar(conta)">
+        <mat-icon>create</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

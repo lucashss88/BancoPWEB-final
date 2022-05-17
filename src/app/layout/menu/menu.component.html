@@ -1,0 +1,16 @@
+<div class="menu-background">
+  <button class="menu" mat-button [matMenuTriggerFor]="menu">MENU</button>
+  <div class="submenu">
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/paginainicial']">
+        Página Inicial
+      </button>
+      <button mat-menu-item [routerLink]="['/cadastrarconta']">
+        Cadastrar Conta
+      </button>
+      <button mat-menu-item [routerLink]="['/listarconta']">
+        Listar Conta
+      </button>
+    </mat-menu>
+  </div>
+</div>

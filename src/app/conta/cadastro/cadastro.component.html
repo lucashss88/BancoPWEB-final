@@ -1,0 +1,42 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<div class="divmaior">
+  <h1 style="">{{ titulo }}</h1>
+  <mat-card class="card-insercao-conta">
+    <mat-card-content>
+      <div fxLayout="row">
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>Nome</mat-label>
+          <input matInput [(ngModel)]="conta.nome" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>CPF</mat-label>
+          <input matInput [(ngModel)]="conta.cpf" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>Saldo da conta</mat-label>
+          <input matInput [(ngModel)]="conta.saldo" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="mat-form-simples">
+          <mat-label>ID da conta</mat-label>
+          <input matInput [(ngModel)]="conta.idconta" />
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-footer>
+      <button
+        mat-raised-button
+        mat-icon-button
+        (click)="inserirConta()"
+        class="buttonfoot"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-card-footer>
+  </mat-card>
+</div>

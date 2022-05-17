@@ -1,0 +1,38 @@
+.divmatcard {
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.mat-card-listagem {
+  max-width: 300px;
+  width: 250px;
+  background-color: aliceblue;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 30px;
+  color: black;
+  display: inline-block;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.matheader {
+  margin-left: 5px;
+  width: 100%;
+}
+
+mat-card-title {
+  margin-right: 10px;
+}
+
+.matactions {
+  margin: 15px;
+}
+
+.matactions button {
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+}

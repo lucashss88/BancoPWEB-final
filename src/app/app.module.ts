@@ -1,16 +1,42 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+//import { MenuComponent } from './layout/menu/menu.component';
+import { LayoutModule } from './layout/layout.module';
+import { ContaModule } from './conta/conta.module';
+import { HttpClientModule } from '@angular/common/http';
+import {FirestoreModule} from "./firestore/firestore.module";
+import { CadastroComponent } from './conta/cadastro/cadastro.component';
+import { ListagemComponent } from './conta/listagem/listagem.component';
+import { PaginainicialComponent } from './conta/paginainicial/paginainicial.component';
+import { MenuComponent } from './layout/menu/menu.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule
+    AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    LayoutModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    ContaModule,
+    HttpClientModule,
+    FirestoreModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
