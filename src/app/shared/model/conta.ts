@@ -1,11 +1,12 @@
 export class Conta {
-  idconta?: string;
+
+  idconta?: number;
   nome?: string;
   cpf?: string;
   saldo?: number;
 
 
-  constructor(idconta?: string, conta: Conta = {}) {
+  constructor(idconta?: number, conta: Conta = {}) {
     this.idconta = idconta;
     this.cpf = conta.cpf;
     this.nome = conta.nome;

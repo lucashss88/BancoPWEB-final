@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Conta } from '../../shared/model/conta';
-import { UsuarioFirestoreService } from '../../shared/services/usuario-firestore.service';
 import {Router} from "@angular/router";
+import {UsuarioService} from "../../shared/services/usuarioService";
 
 @Component({
   selector: 'app-listagem',
@@ -10,12 +10,12 @@ import {Router} from "@angular/router";
 })
 export class ListagemComponent implements OnInit {
   contas: Conta[];
-  constructor(private contaFirestoreService: UsuarioFirestoreService, private roteador: Router) {
+  constructor(private usuarioService: UsuarioService, private roteador: Router) {
     this.contas = new Array<Conta>();
   }
 
   ngOnInit() {
-    this.contaFirestoreService.listar().subscribe((contas) => (this.contas = contas));
+    this.usuarioService.listar().subscribe((contas) => (this.contas = contas));
   }
 
   editar(conta: Conta): void {
@@ -23,7 +23,7 @@ export class ListagemComponent implements OnInit {
   }
 
   remover(conta: Conta) {
-    this.contaFirestoreService.remover(conta.idconta || '').subscribe(
+    this.usuarioService.remover(conta.idconta || 0).subscribe(
       removido => {
         const indxUsuario = this.contas.findIndex(u => u.idconta === conta.idconta);
 

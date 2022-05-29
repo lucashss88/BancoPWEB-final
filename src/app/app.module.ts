@@ -13,7 +13,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from './layout/layout.module';
 import { ContaModule } from './conta/conta.module';
 import { HttpClientModule } from '@angular/common/http';
-import {FirestoreModule} from "./firestore/firestore.module";
 import { CadastroComponent } from './conta/cadastro/cadastro.component';
 import { ListagemComponent } from './conta/listagem/listagem.component';
 import { PaginainicialComponent } from './conta/paginainicial/paginainicial.component';
@@ -34,7 +33,6 @@ import { MenuComponent } from './layout/menu/menu.component';
     MatIconModule,
     ContaModule,
     HttpClientModule,
-    FirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
