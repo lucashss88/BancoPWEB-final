@@ -10,10 +10,13 @@ import { ListagemComponent } from './listagem/listagem.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { PaginainicialComponent } from './paginainicial/paginainicial.component';
+import {ListagemUsuarioTabelaComponent} from "./listagem-tabela/listagem-tabela";
+import {MatTableModule} from "@angular/material/table";
+import {PipesModule} from "../shared/pipes/pipes.module";
 
 @NgModule({
-  declarations: [CadastroComponent, ListagemComponent, PaginainicialComponent],
-  exports: [CadastroComponent, ListagemComponent, PaginainicialComponent],
+  declarations: [CadastroComponent, ListagemComponent,ListagemUsuarioTabelaComponent, PaginainicialComponent],
+  exports: [CadastroComponent, ListagemComponent,ListagemUsuarioTabelaComponent, PaginainicialComponent],
   imports: [
     BrowserAnimationsModule,
     CommonModule,
@@ -23,6 +26,8 @@ import { PaginainicialComponent } from './paginainicial/paginainicial.component'
     FormsModule,
     MatIconModule,
     MatButtonModule,
+    MatTableModule,
+    PipesModule
   ],
 })
 export class ContaModule {}

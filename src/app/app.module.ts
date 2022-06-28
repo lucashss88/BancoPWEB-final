@@ -17,6 +17,7 @@ import { CadastroComponent } from './conta/cadastro/cadastro.component';
 import { ListagemComponent } from './conta/listagem/listagem.component';
 import { PaginainicialComponent } from './conta/paginainicial/paginainicial.component';
 import { MenuComponent } from './layout/menu/menu.component';
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,6 +34,7 @@ import { MenuComponent } from './layout/menu/menu.component';
     MatIconModule,
     ContaModule,
     HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

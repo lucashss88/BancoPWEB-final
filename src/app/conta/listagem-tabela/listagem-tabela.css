@@ -1,0 +1,24 @@
+mat-label input {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+mat-form-field {
+  width: 100%;
+  margin-bottom: 10px;
+}
+mat-label{
+  margin-bottom: 20px;
+}
+div {
+  padding: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1{
+  text-align: center;
+}
+mat-table {
+  background-color: aliceblue;
+  color: black;
+}
