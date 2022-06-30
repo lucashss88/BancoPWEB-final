@@ -3,6 +3,7 @@ import {MatTableDataSource} from '@angular/material/table';
 import {UsuarioService} from '../../shared/services/usuarioService';
 import {ActivatedRoute} from '@angular/router';
 import {Conta} from "../../shared/model/conta";
+import {MensagemService} from "../../shared/services/mensagemService";
 
 @Component({
   selector: 'app-listagem-tabela',
@@ -14,7 +15,7 @@ export class ListagemUsuarioTabelaComponent implements OnInit {
   mostrarColunas = ['nome', 'cpf', 'acoes'];
   public dadosTabela: MatTableDataSource<Conta>;
 
-  constructor(private usuarioService: UsuarioService, private rotaAtual: ActivatedRoute) {
+  constructor(private usuarioService: UsuarioService, private rotaAtual: ActivatedRoute, private mensagemService: MensagemService) {
     this.dadosTabela = new MatTableDataSource<Conta>();
   }
 
@@ -42,9 +43,16 @@ export class ListagemUsuarioTabelaComponent implements OnInit {
 
   removerUsuario(usuario: Conta, indice: number) {
     this.usuarioService.remover(usuario.idconta || -1).subscribe(
-      removido => {
-        this.dadosTabela.data.splice(indice, 1);
-        this.dadosTabela = new MatTableDataSource<Conta>(this.dadosTabela.data);
+      {
+        next: removido => {
+          this.mensagemService.success('Usuário removido!')
+          this.dadosTabela.data.splice(indice, 1);
+          this.dadosTabela = new MatTableDataSource<Conta>(this.dadosTabela.data);
+
+        },
+        error: err => {
+          this.mensagemService.error('Erro na remoção!')
+        }
       }
     );
   }

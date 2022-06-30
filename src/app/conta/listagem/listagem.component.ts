@@ -24,6 +24,7 @@ export class ListagemComponent implements OnInit {
     this.usuarioService.remover(conta.idconta || 0).subscribe(
       {
         next: removido => {
+          this.mensagemService.success('Usuário removido!')
           const indxUsuario = this.contas.findIndex(u => u.idconta === conta.idconta);
 
           if (indxUsuario > -1) {
