@@ -23,10 +23,15 @@ export class CadastroComponent {
 
   inserirConta(): void {
       this.usuarioService.inserir(this.conta).subscribe(
-        () => {
-          this.mensagemService.info('Usuário cadastrado com sucesso!');
-          this.roteador.navigate(['listarconta']);
-          console.log(this.conta)
+        {
+          next: () => {
+            this.mensagemService.success('Usuário cadastrado com sucesso!');
+            this.roteador.navigate(['listarconta']);
+            console.log(this.conta)
+          },
+          error: err => {
+            this.mensagemService.error('Usuário inválido!');
+          }
         }
       );
     //this.contas.push(this.conta);
