@@ -22,7 +22,7 @@ export class UsuarioService {
     return this.clienteHttp.post<Conta>(this.URL_USUARIOS, usuario);
   }
 
-  remover(idconta: Number): Observable<object> {
+  remover(idconta: number): Observable<object> {
     // DELETE /usuarios/id
     return this.clienteHttp.delete(`${this.URL_USUARIOS}/${idconta}`);
   }

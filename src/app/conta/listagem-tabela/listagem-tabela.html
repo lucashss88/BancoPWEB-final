@@ -23,7 +23,7 @@
 
   <ng-container matColumnDef="cpf">
     <mat-header-cell *matHeaderCellDef>CPF do Usuário</mat-header-cell>
-    <mat-cell *matCellDef="let conta">{{conta.cpf}}</mat-cell>
+    <mat-cell *matCellDef="let conta">{{conta.cpf | cpf}}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="acoes">
