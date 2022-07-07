@@ -1,19 +1,22 @@
 <div class="menu-background">
-  <button class="menu" mat-button [matMenuTriggerFor]="menu">MENU</button>
-  <div class="submenu">
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item [routerLink]="['/paginainicial']">
-        Página Inicial
-      </button>
-      <button mat-menu-item [routerLink]="['/cadastrarconta']">
-        Cadastrar Conta
-      </button>
-      <button mat-menu-item [routerLink]="['/listarconta']">
-        Listar Conta
-      </button>
-      <button mat-menu-item [routerLink]="['/listarconta-tabela']">
-        Listar Conta-Tabela
-      </button>
-    </mat-menu>
+  <button class="menu" mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+  <mat-menu #menu="matMenu" class="butmenu">
+    <button mat-menu-item [routerLink]="['/cadastrarconta']">
+      Cadastrar Conta
+    </button>
+    <button mat-menu-item [routerLink]="['/listarconta']">
+      Listar Conta
+    </button>
+    <button mat-menu-item [routerLink]="['/listarconta-tabela']">
+      Listar Conta-Tabela
+    </button>
+  </mat-menu>
+  <div class="apps">
+    <button mat-icon-button [routerLink]="['/paginainicial']" class="home">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button [routerLink]="['/login']" class="exit">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
   </div>
 </div>

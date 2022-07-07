@@ -7,18 +7,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [MenuComponent],
   exports: [MenuComponent],
-  imports: [
-    BrowserAnimationsModule,
-    CommonModule,
-    MatButtonModule,
-    MatMenuModule,
-    RouterModule,
-    FormsModule,
-    MatCardModule,
-  ],
+    imports: [
+        BrowserAnimationsModule,
+        CommonModule,
+        MatButtonModule,
+        MatMenuModule,
+        RouterModule,
+        FormsModule,
+        MatCardModule,
+        MatIconModule,
+    ],
 })
 export class LayoutModule {}

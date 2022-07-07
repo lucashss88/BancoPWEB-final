@@ -1,10 +1,33 @@
-.submenu{
-  background-color: #497683;
-}
 .menu-background {
-  background-color: black;
+  height: 40px;
+  font-family: Poppins;
 }
 .menu {
+  color: white;
+  background-color: black;
   border-radius: unset;
   font-weight: bold;
+  height: 40px;
+  width: 60px;
+  font-family: Poppins;
+}
+.apps{
+  display: inline-flex;
+  margin-left: 91.5%;
+  width: 40px;
+  height: 40px;
+  color: black;
+}
+.home{
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: black;
+  margin-right: 7px;
+}
+.exit{
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: black;
 }

@@ -13,21 +13,25 @@ import { PaginainicialComponent } from './paginainicial/paginainicial.component'
 import {ListagemUsuarioTabelaComponent} from "./listagem-tabela/listagem-tabela";
 import {MatTableModule} from "@angular/material/table";
 import {PipesModule} from "../shared/pipes/pipes.module";
+import { CreditarComponent } from './creditar/creditar.component';
+import { TelaloginComponent } from './telalogin/telalogin.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
-  declarations: [CadastroComponent, ListagemComponent,ListagemUsuarioTabelaComponent, PaginainicialComponent],
+  declarations: [CadastroComponent, ListagemComponent,ListagemUsuarioTabelaComponent, PaginainicialComponent, CreditarComponent, TelaloginComponent],
   exports: [CadastroComponent, ListagemComponent,ListagemUsuarioTabelaComponent, PaginainicialComponent],
-  imports: [
-    BrowserAnimationsModule,
-    CommonModule,
-    MatCardModule,
-    MatInputModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatIconModule,
-    MatButtonModule,
-    MatTableModule,
-    PipesModule
-  ],
+    imports: [
+        BrowserAnimationsModule,
+        CommonModule,
+        MatCardModule,
+        MatInputModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatIconModule,
+        MatButtonModule,
+        MatTableModule,
+        PipesModule,
+        RouterModule
+    ],
 })
 export class ContaModule {}

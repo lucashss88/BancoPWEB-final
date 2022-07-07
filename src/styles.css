@@ -13,3 +13,7 @@ snack-bar-container.warning {
 snack-bar-container.info {
   background-color: #497683;
 }
+body{
+  background-color: hotpink;
+  font-family: Poppins;
+}
