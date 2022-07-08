@@ -12,6 +12,10 @@ const routes: Routes = [
     component: CadastroComponent,
   },
   {
+    path: 'editarconta/:id',
+    component: CadastroComponent
+  },
+  {
     path: 'listarconta',
     component: ListagemComponent,
   },
