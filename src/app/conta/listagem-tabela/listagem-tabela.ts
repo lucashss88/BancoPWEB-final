@@ -42,7 +42,7 @@ export class ListagemUsuarioTabelaComponent implements OnInit {
   }
 
   removerUsuario(usuario: Conta, indice: number) {
-    this.usuarioService.remover(usuario.idconta || -1).subscribe(
+    this.usuarioService.remover(usuario.id || -1).subscribe(
       {
         next: removido => {
           this.mensagemService.success('Usuário removido!')

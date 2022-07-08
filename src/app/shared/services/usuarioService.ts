@@ -29,7 +29,7 @@ export class UsuarioService {
 
   alterar(usuarioNovosValores: Conta): Observable<Conta> {
     // PUT /usuarios/id
-    return this.clienteHttp.put<Conta>(`${this.URL_USUARIOS}/${usuarioNovosValores.idconta}`, usuarioNovosValores);
+    return this.clienteHttp.put<Conta>(`${this.URL_USUARIOS}/${usuarioNovosValores.id}`, usuarioNovosValores);
   }
 
   pesquisarPorId(id: number): Observable<Conta> {

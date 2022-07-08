@@ -32,18 +32,26 @@ export class CadastroComponent {
       this.usuarioService.inserir(this.conta).subscribe(
         {
           next: () => {
-            this.mensagemService.success('Usuário cadastrado com sucesso!');
+            this.mensagemService.success('Conta cadastrada com sucesso!');
             this.roteador.navigate(['listarconta']);
             console.log(this.conta)
           },
           error: err => {
-            this.mensagemService.error('Usuário inválido!');
+            this.mensagemService.error('Conta inválida!');
           }
         }
       );
     }
     else {
-      this.usuarioService.alterar(this.conta).subscribe();
+      this.usuarioService.alterar(this.conta).subscribe(
+        () => {
+          this.mensagemService.success('Conta editada com sucesso!');
+          this.roteador.navigate(['listarconta']);
+        },
+        err => {
+          this.mensagemService.error('Conta com erro! ')
+        }
+      );
     }
     //this.contas.push(this.conta);
     //this.conta = new Conta();

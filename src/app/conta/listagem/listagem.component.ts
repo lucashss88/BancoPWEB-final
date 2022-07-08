@@ -21,11 +21,11 @@ export class ListagemComponent implements OnInit {
 
 
   remover(conta: Conta) {
-    this.usuarioService.remover(conta.idconta || 0).subscribe(
+    this.usuarioService.remover(conta.id || 0).subscribe(
       {
         next: removido => {
-          this.mensagemService.success('Usuário removido!')
-          const indxUsuario = this.contas.findIndex(u => u.idconta === conta.idconta);
+          this.mensagemService.success('Conta removida!')
+          const indxUsuario = this.contas.findIndex(u => u.id === conta.id);
 
           if (indxUsuario > -1) {
             this.contas.splice(indxUsuario, 1);
